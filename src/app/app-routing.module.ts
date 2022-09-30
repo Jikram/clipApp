@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ClipComponent } from './clip/clip.component';
 import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [ 
   {
@@ -16,6 +17,12 @@ const routes: Routes = [
   {
     path : 'clip/:id',
     component: ClipComponent
+  },
+  //wildcard route should always be the last
+  {
+    path: '**',
+    component: NotfoundComponent
+
   }
 ];
 
